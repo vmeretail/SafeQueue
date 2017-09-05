@@ -42,7 +42,8 @@ class WorkCommand extends IlluminateWorkCommand
              */
             $this->signature = preg_replace(
                 self::SIGNATURE_REGEX_PATTERN, $commandName,  $this->signature, 1
-            );
+            ) . "{--supervisor= : The name of the supervisor the worker belongs to}";
         }
     }
 }
+    
